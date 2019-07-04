@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <CustomList/>
+    <custom-list/>
   </div>
 </template>
 

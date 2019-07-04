@@ -1,28 +1,18 @@
 <template functional>
-  <FullListItem v-if="props.item.id"/>
-  <EmptyListItem v-else/>
+  <li class="item">
+    <slot></slot>
+  </li>
 </template>
 
 <script>
-import FullListItem from "./FullListItem";
-import EmptyListItem from "./EmptyListItem";
-
 export default {
-  name: "CustomListItem",
-  props: {
-    item: {
-      type: Object,
-      default() {
-        return {};
-      }
-    }
-  }
+  name: "custom-list-item"
 };
 </script>
 
 <style scoped>
 .item {
-  color: black;
+  text-align: left;
 }
 </style>
 
