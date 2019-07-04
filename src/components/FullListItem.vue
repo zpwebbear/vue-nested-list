@@ -4,16 +4,16 @@
     <div class="item__controls">
       <button @click.prevent="$emit('item:move-up')">&uarr;</button>
       <button @click.prevent="$emit('item:move-down')">&darr;</button>
-      <button @click.prevent="$emit('item:move-up')">Add sublist</button>
-      <button @click.prevent="$emit('item:move-up')">Remove sublist</button>
-      <button @click.prevent="$emit('item:move-up')">x</button>
+      <button @click.prevent="$emit('item:add-sublist')">Add sublist</button>
+      <button @click.prevent="$emit('item:remove-sublist')">Remove sublist</button>
+      <button @click.prevent="$emit('item:remove')">x</button>
     </div>
-    <custom-list v-if="item.hasSublist"/>
+    <custom-list/>
   </div>
 </template>
 
 <script>
-import CustomList from "./CustomList.vue";
+import CustomList from "@/components/CustomList";
 
 export default {
   name: "full-list-item",
@@ -28,6 +28,9 @@ export default {
   },
   data() {
     return {};
+  },
+  updated() {
+    console.log("FULL LIST ITEM UPDATED", this.item);
   }
 };
 </script>

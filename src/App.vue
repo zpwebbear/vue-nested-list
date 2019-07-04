@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import CustomList from "./components/CustomList";
+import CustomList from "@/components/CustomList";
 
 export default {
   name: "App",
